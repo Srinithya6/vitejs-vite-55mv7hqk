@@ -1,7 +1,9 @@
-// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -9,10 +11,10 @@ export default {
           dark: '#0B0E18',
           light: '#1E293B',
           accent: '#60A5FA',
-          highlight: '#8B5CF6',
-        },
-      },
+          highlight: '#8B5CF6'
+        }
+      }
     },
   },
   plugins: [],
-};
+}

@@ -1,9 +1,9 @@
 // src/App.jsx
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Dashboard from './components/Dashboard';
-import sampleExoplanets from './data/sampleExoplanets';
-import * as exoplanetAPI from './services/exoplanetAPI';
+import Navbar from './components/Navbar.jsx';
+import Dashboard from './components/Dashboard.jsx';
+import sampleExoplanets from './data/sampleExoplanets.js';
+import * as exoplanetAPI from './services/exoplanetAPI.js';
 
 const App = () => {
   // State for exoplanet data

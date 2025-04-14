@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom styles go below this line */
+body {
+  @apply bg-space-dark text-gray-100;
+  font-family: 'Inter', sans-serif;
+}
