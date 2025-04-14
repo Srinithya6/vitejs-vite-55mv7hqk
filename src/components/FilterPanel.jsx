@@ -97,19 +97,19 @@ const FilterPanel = ({
         prev.radiusRange[1] === 20 ? [minRadius, maxRadius] : prev.radiusRange,
     }));
 
-    // Update UI state too
-    setYearMin(prev.yearRange[0] === 1990 ? minYear : prev.yearRange[0]);
-    setYearMax(prev.yearRange[1]);
-    setDistanceMin(prev.distanceRange[0]);
+    // Update UI state too using current filters state
+    setYearMin(filters.yearRange[0] === 1990 ? minYear : filters.yearRange[0]);
+    setYearMax(filters.yearRange[1]);
+    setDistanceMin(filters.distanceRange[0]);
     setDistanceMax(
-      prev.distanceRange[1] === 1000 ? maxDist : prev.distanceRange[1]
+      filters.distanceRange[1] === 1000 ? maxDist : filters.distanceRange[1]
     );
-    setTempMin(prev.temperatureRange[0]);
+    setTempMin(filters.temperatureRange[0]);
     setTempMax(
-      prev.temperatureRange[1] === 3000 ? maxTemp : prev.temperatureRange[1]
+      filters.temperatureRange[1] === 3000 ? maxTemp : filters.temperatureRange[1]
     );
-    setRadiusMin(prev.radiusRange[0]);
-    setRadiusMax(prev.radiusRange[1] === 20 ? maxRadius : prev.radiusRange[1]);
+    setRadiusMin(filters.radiusRange[0]);
+    setRadiusMax(filters.radiusRange[1] === 20 ? maxRadius : filters.radiusRange[1]);
   }, [planets]);
 
   // Update parent component when filters change
