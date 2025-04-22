@@ -1,4 +1,4 @@
-// // postcss.config.js - ES Module version
+// postcss.config.js - ES Module version
 export default {
   plugins: {
     tailwindcss: {},
