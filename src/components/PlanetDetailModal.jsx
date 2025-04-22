@@ -39,66 +39,7 @@ const PlanetDetailModal = ({ planet, onClose, isOpen }) => {
     return null;
   }
 
-  // Generate key stats for radar chart
-  const generatePlanetStats = () => {
-    // Scale values to 0-100 range for visualization
-    const stats = [
-      {
-        stat: 'Size',
-        value: planet.pl_rade ? Math.min(100, (planet.pl_rade / 2) * 100) : 0,
-        fullMark: 100,
-        fullMarkName: '>2x Earth',
-      },
-      {
-        stat: 'Temperature',
-        // Normalize temperature where 288K (Earth) = 50
-        value: planet.pl_eqt
-          ? Math.max(0, Math.min(100, 100 - Math.abs(planet.pl_eqt - 288) / 5))
-          : 0,
-        fullMark: 100,
-        fullMarkName: 'Earth-like (288K)',
-      },
-      {
-        stat: 'Mass',
-        value: planet.pl_bmasse
-          ? Math.min(100, (planet.pl_bmasse / 10) * 100)
-          : 0,
-        fullMark: 100,
-        fullMarkName: '>10x Earth',
-      },
-      {
-        stat: 'Orbit',
-        // Normalize orbit where 1AU = 50
-        value: planet.pl_orbsmax
-          ? Math.max(
-              0,
-              Math.min(100, 100 - Math.abs(planet.pl_orbsmax - 1) * 50)
-            )
-          : 0,
-        fullMark: 100,
-        fullMarkName: 'Earth-like (1AU)',
-      },
-      {
-        stat: 'Star Type',
-        // G stars (like our Sun) get highest scores
-        value: planet.st_spectype
-          ? planet.st_spectype.startsWith('G')
-            ? 100
-            : planet.st_spectype.startsWith('K')
-            ? 80
-            : planet.st_spectype.startsWith('F')
-            ? 60
-            : planet.st_spectype.startsWith('M')
-            ? 40
-            : 20
-          : 0,
-        fullMark: 100,
-        fullMarkName: 'G-type (Sun-like)',
-      },
-    ];
-
-    return stats;
-  };
+  
 
   // Discovery method pie chart data
   const starInfo = [
@@ -551,34 +492,6 @@ const PlanetDetailModal = ({ planet, onClose, isOpen }) => {
                   Habitability
                 </h3>
                 <HabitabilityScore planet={planet} compact={true} />
-              </div>
-            </div>
-
-            <div className="planet-radar-stats mt-6">
-              <h3 className="text-lg font-medium text-white mb-4">
-                Planet Stats Visualization
-              </h3>
-
-              <div style={{ width: '100%', height: 300 }}>
-                <ResponsiveContainer>
-                  <RadarChart data={generatePlanetStats()}>
-                    <PolarGrid stroke="#666" />
-                    <PolarAngleAxis dataKey="stat" tick={{ fill: '#ddd' }} />
-                    <PolarRadiusAxis
-                      angle={90}
-                      domain={[0, 100]}
-                      tick={{ fill: '#ddd' }}
-                    />
-                    <Radar
-                      name="Planet Properties"
-                      dataKey="value"
-                      stroke="#8884d8"
-                      fill="#8884d8"
-                      fillOpacity={0.6}
-                    />
-                    <Tooltip />
-                  </RadarChart>
-                </ResponsiveContainer>
               </div>
             </div>
 
