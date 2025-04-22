@@ -117,7 +117,6 @@ const OrbitVisualizer = ({
   // Set up orbits when planets change
   useEffect(() => {
     setupOrbits();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [planets, width, height]);
 
   // Handle animation
@@ -134,7 +133,7 @@ const OrbitVisualizer = ({
         cancelAnimationFrame(animationRef.current);
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [planets, animated]);
 
   // Create SVG paths for orbits
