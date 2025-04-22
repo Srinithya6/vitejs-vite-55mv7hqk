@@ -37,9 +37,7 @@ const PlanetDetailModal = ({ planet, onClose, isOpen }) => {
   // If modal is not open or no planet is selected
   if (!isOpen || !planet) {
     return null;
-  }
-
-  
+  } 
 
   // Discovery method pie chart data
   const starInfo = [
@@ -119,8 +117,8 @@ const PlanetDetailModal = ({ planet, onClose, isOpen }) => {
                 </h4>
                 <p className="text-lg text-white">
                   {inHabitableZone
-                    ? '✅ Within habitable zone'
-                    : '❌ Outside habitable zone'}
+                    ? 'Within habitable zone'
+                    : 'Outside habitable zone'}
                 </p>
               </div>
             </div>
@@ -330,12 +328,12 @@ const PlanetDetailModal = ({ planet, onClose, isOpen }) => {
                 </h4>
                 <p className="text-lg text-white">
                   {planet.pl_name === 'Kepler-186f' && planet.disc_year === 2014
-                    ? '✅ First Earth-sized planet in habitable zone'
+                    ? 'First Earth-sized planet in habitable zone'
                     : planet.pl_name === 'K2-18b' && planet.disc_year === 2015
-                    ? '✅ First habitable zone planet with detected water vapor'
+                    ? 'First habitable zone planet with detected water vapor'
                     : planet.pl_name === '51 Peg b' && planet.disc_year === 1995
-                    ? '✅ First exoplanet around a Sun-like star'
-                    : '❌ Not a first discovery milestone'}
+                    ? 'First exoplanet around a Sun-like star'
+                    : 'Not a first discovery milestone'}
                 </p>
               </div>
             </div>
