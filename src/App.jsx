@@ -26,8 +26,6 @@ const App = () => {
           // Process data to match our expected format
           const processedData = apiData.map((planet) => ({
             ...planet,
-            // Generate a random description for demo purposes
-            // In a real app, you would get this from the API or a database
             description: getRandomDescription(planet),
             // Manually compute habitability for API data
             habitable:
@@ -70,7 +68,7 @@ const App = () => {
     setCurrentView(view);
   };
 
-  // Generate random descriptions for planets from API
+  // Generate descriptions for planets from API
   const getRandomDescription = (planet) => {
     const descriptions = [
       `${planet.pl_name} is a ${
