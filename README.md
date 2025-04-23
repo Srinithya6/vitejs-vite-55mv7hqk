@@ -2,7 +2,6 @@
 
 A React application for visualizing and exploring NASA's exoplanet data. This project provides interactive visualizations, comparison tools, and detailed information about exoplanets discovered so far.
 
-![Exoplanet Explorer Screenshot](https://api.placeholder.com/900/500)
 
 ## Features
 
@@ -28,7 +27,7 @@ A React application for visualizing and exploring NASA's exoplanet data. This pr
 ```bash
 git clone https://github.com/Srinithya6/vitejs-vite-55mv7hqk.git
 cd vitejs-vite-55mv7hqk
-
+```
 2. Install dependencies:
 
 ```bash
