@@ -14,31 +14,6 @@ A React application for visualizing and exploring NASA's exoplanet data. This pr
 - **Discovery Timeline**: Track exoplanet discoveries over time
 - **Connect to NASA API**: Use real-time data from the NASA Exoplanet Archive
 
-## Project Structure
-src/
-├── App.jsx                # Main application component
-├── index.css              # Global styles
-├── main.jsx               # Entry point
-├── components/            # UI components
-│   ├── Dashboard.jsx      # Main dashboard layout
-│   ├── ExoplanetCard.jsx  # Card component for displaying planet info
-│   ├── FilterPanel.jsx    # Filtering UI component
-│   ├── PlanetDetailModal.jsx # Detailed planet view modal
-│   ├── Navbar.jsx         # Navigation bar
-│   ├── visualizations/    # Visualization components
-│   │   ├── OrbitVisualizer.jsx
-│   │   ├── HabitabilityScore.jsx
-│   │   ├── CompareSystems.jsx
-│   │   ├── TimeDiscoveryChart.jsx
-│   │   └── SizeComparisonChart.jsx
-├── data/                  # Static data
-│   └── sampleExoplanets.js # Sample dataset for development
-├── services/              # API services
-│   └── exoplanetAPI.js    # NASA Exoplanet Archive API connector
-└── utils/                 # Utility functions
-├── calculations.js    # Calculation helpers
-└── helpers.js         # General helper functions
-
 ## Getting Started
 
 ### Prerequisites
@@ -54,43 +29,47 @@ src/
 git clone https://github.com/Srinithya6/vitejs-vite-55mv7hqk.git
 cd vitejs-vite-55mv7hqk
 
-Install dependencies:
+2. Install dependencies:
 
-bashnpm install
+```bash
+npm install
 
-Start the development server:
+3. Start the development server:
 
-bashnpm run dev
+```bash
+npm run dev
 
-Open your browser and navigate to http://localhost:5173 (or the port shown in your terminal)
+4. Open your browser and navigate to http://localhost:5173 (or the port shown in your terminal)
 
-StackBlitz Setup
+### StackBlitz Setup
 To work on this project in StackBlitz:
 
-Go to StackBlitz
-Create a new React + Vite project
-Copy the project files to the StackBlitz workspace
-Install required dependencies:
+1. Go to StackBlitz
+2. Create a new React + Vite project
+3. Copy the project files to the StackBlitz workspace
+4. Install required dependencies:
 
-bashnpm install recharts tailwindcss postcss autoprefixer axios lodash
+```bash
+npm install recharts tailwindcss postcss autoprefixer axios lodash
 npm install -D @tailwindcss/forms @tailwindcss/typography
 
-Initialize Tailwind CSS:
+5. Initialize Tailwind CSS:
 
-bashnpx tailwindcss init -p
-Data Sources
+```bash
+npx tailwindcss init -p
+
+## Data Sources
 This application can use two data sources:
 
-Sample Data: A curated list of interesting exoplanets included in the project
-NASA API: Live data from the NASA Exoplanet Archive
+### Sample Data: A curated list of interesting exoplanets included in the project
+### NASA API: Live data from the NASA Exoplanet Archive
 
-API Reference
+## API Reference
 The application connects to the NASA Exoplanet Archive using their Table Access Protocol (TAP) service. Documentation is available at:
+https://exoplanetarchive.ipac.caltech.edu
 
-NASA Exoplanet Archive API Documentation
-
-Main Components
-OrbitVisualizer.jsx
+## Main Components
+### OrbitVisualizer.jsx
 Visualizes planetary orbits using SVG. Features include:
 
 Dynamic orbit path generation based on planet data
