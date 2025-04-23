@@ -1,54 +1,160 @@
-# React + TypeScript + Vite
+# Exoplanet Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application for visualizing and exploring NASA's exoplanet data. This project provides interactive visualizations, comparison tools, and detailed information about exoplanets discovered so far.
 
-Currently, two official plugins are available:
+![Exoplanet Explorer Screenshot](https://api.placeholder.com/900/500)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Exoplanet Gallery**: Browse and filter discovered exoplanets
+- **Data Visualizations**: Various charts and visualizations for exoplanet data
+- **System Comparison**: Compare different planetary systems with our Solar System
+- **Orbit Visualizer**: See how planets orbit their host stars
+- **Habitability Scoring**: Analyze which planets might support life
+- **Discovery Timeline**: Track exoplanet discoveries over time
+- **Connect to NASA API**: Use real-time data from the NASA Exoplanet Archive
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Project Structure
+src/
+├── App.jsx                # Main application component
+├── index.css              # Global styles
+├── main.jsx               # Entry point
+├── components/            # UI components
+│   ├── Dashboard.jsx      # Main dashboard layout
+│   ├── ExoplanetCard.jsx  # Card component for displaying planet info
+│   ├── FilterPanel.jsx    # Filtering UI component
+│   ├── PlanetDetailModal.jsx # Detailed planet view modal
+│   ├── Navbar.jsx         # Navigation bar
+│   ├── visualizations/    # Visualization components
+│   │   ├── OrbitVisualizer.jsx
+│   │   ├── HabitabilityScore.jsx
+│   │   ├── CompareSystems.jsx
+│   │   ├── TimeDiscoveryChart.jsx
+│   │   └── SizeComparisonChart.jsx
+├── data/                  # Static data
+│   └── sampleExoplanets.js # Sample dataset for development
+├── services/              # API services
+│   └── exoplanetAPI.js    # NASA Exoplanet Archive API connector
+└── utils/                 # Utility functions
+├── calculations.js    # Calculation helpers
+└── helpers.js         # General helper functions
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Prerequisites
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Node.js (v14.0.0 or higher)
+- npm or yarn
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Installation
+
+1. Clone the repository and navigate to the project directory:
+
+```bash
+git clone https://github.com/Srinithya6/vitejs-vite-55mv7hqk.git
+cd vitejs-vite-55mv7hqk
+
+Install dependencies:
+
+bashnpm install
+
+Start the development server:
+
+bashnpm run dev
+
+Open your browser and navigate to http://localhost:5173 (or the port shown in your terminal)
+
+StackBlitz Setup
+To work on this project in StackBlitz:
+
+Go to StackBlitz
+Create a new React + Vite project
+Copy the project files to the StackBlitz workspace
+Install required dependencies:
+
+bashnpm install recharts tailwindcss postcss autoprefixer axios lodash
+npm install -D @tailwindcss/forms @tailwindcss/typography
+
+Initialize Tailwind CSS:
+
+bashnpx tailwindcss init -p
+Data Sources
+This application can use two data sources:
+
+Sample Data: A curated list of interesting exoplanets included in the project
+NASA API: Live data from the NASA Exoplanet Archive
+
+API Reference
+The application connects to the NASA Exoplanet Archive using their Table Access Protocol (TAP) service. Documentation is available at:
+
+NASA Exoplanet Archive API Documentation
+
+Main Components
+OrbitVisualizer.jsx
+Visualizes planetary orbits using SVG. Features include:
+
+Dynamic orbit path generation based on planet data
+Animated planet revolution
+Proper scaling to show relative orbital distances
+Star color based on spectral type
+
+HabitabilityScore.jsx
+Calculates and displays a visual score based on planet conditions:
+
+Temperature assessment
+Size/mass evaluation
+Star type consideration
+Orbit zone analysis
+
+CompareSystems.jsx
+Compares exoplanet systems to our Solar System:
+
+Side-by-side visualization
+Multiple comparison views (distance, size, temperature)
+Interactive data charts
+
+TimeDiscoveryChart.jsx
+Tracks exoplanet discoveries over time:
+
+Filter by discovery method
+Multiple chart types (line, bar, area)
+Cumulative and per-year statistics
+
+FilterPanel.jsx
+A comprehensive filtering system:
+
+Filter by planet type
+Filter by discovery method
+Filter by physical characteristics
+Filter by habitability potential
+
+Extending the Project
+Adding New Visualizations
+
+Create a new component in the src/components/visualizations directory
+Import it in the Dashboard component
+Add a new view option in the Navbar component
+
+Connecting to Additional Data Sources
+Modify the exoplanetAPI.js file to include additional API endpoints or data sources.
+Technologies Used
+
+React: UI framework
+Vite: Build tool
+Tailwind CSS: Styling
+Recharts: Data visualization
+Axios: API requests
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+Acknowledgments
+
+Data provided by NASA Exoplanet Archive
+Planet habitability calculations based on current scientific understanding
+Icons from Material Icons
+
+Contributors
+
+Sri Nithya Anne – M.S. Electrical & Computer Engineering – srinithya@northeastern.edu
+Shayda Moezzi – Ph.D. Electrical & Computer Engineering – shayda@northeastern.edu
+Satya Nandivada – M.S. Electrical & Computer Engineering – satya@northeastern.edu
