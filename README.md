@@ -1,4 +1,4 @@
-# Exoplanet Explorer
+# Processing the Cosmos: Visualizing Exoplanet Data
 
 A React application for visualizing and exploring NASA's exoplanet data. This project provides interactive visualizations, comparison tools, and detailed information about exoplanets discovered so far.
 
