@@ -32,12 +32,12 @@ cd vitejs-vite-55mv7hqk
 
 ```bash
 npm install
-
+```
 3. Start the development server:
 
 ```bash
 npm run dev
-
+```
 4. Open your browser and navigate to http://localhost:5173 (or the port shown in your terminal)
 
 ### StackBlitz Setup
@@ -51,12 +51,12 @@ To work on this project in StackBlitz:
 ```bash
 npm install recharts tailwindcss postcss autoprefixer axios lodash
 npm install -D @tailwindcss/forms @tailwindcss/typography
-
+```
 5. Initialize Tailwind CSS:
 
 ```bash
 npx tailwindcss init -p
-
+```
 ## Data Sources
 This application can use two data sources:
 
@@ -71,68 +71,68 @@ https://exoplanetarchive.ipac.caltech.edu
 ### OrbitVisualizer.jsx
 Visualizes planetary orbits using SVG. Features include:
 
-Dynamic orbit path generation based on planet data
-Animated planet revolution
-Proper scaling to show relative orbital distances
-Star color based on spectral type
+- Dynamic orbit path generation based on planet data
+- Animated planet revolution
+- Proper scaling to show relative orbital distances
+- Star color based on spectral type
 
-HabitabilityScore.jsx
+### HabitabilityScore.jsx
 Calculates and displays a visual score based on planet conditions:
 
-Temperature assessment
-Size/mass evaluation
-Star type consideration
-Orbit zone analysis
+- Temperature assessment
+- Size/mass evaluation
+- Star type consideration
+- Orbit zone analysis
 
-CompareSystems.jsx
+### CompareSystems.jsx
 Compares exoplanet systems to our Solar System:
 
-Side-by-side visualization
-Multiple comparison views (distance, size, temperature)
-Interactive data charts
+- Side-by-side visualization
+- Multiple comparison views (distance, size, temperature)
+- Interactive data charts
 
-TimeDiscoveryChart.jsx
+### TimeDiscoveryChart.jsx
 Tracks exoplanet discoveries over time:
 
-Filter by discovery method
-Multiple chart types (line, bar, area)
-Cumulative and per-year statistics
+- Filter by discovery method
+- Multiple chart types (line, bar, area)
+- Cumulative and per-year statistics
 
-FilterPanel.jsx
+### FilterPanel.jsx
 A comprehensive filtering system:
 
-Filter by planet type
-Filter by discovery method
-Filter by physical characteristics
-Filter by habitability potential
+- Filter by planet type
+- Filter by discovery method
+- Filter by physical characteristics
+- Filter by habitability potential
 
-Extending the Project
-Adding New Visualizations
+## Extending the Project
+### Adding New Visualizations
 
-Create a new component in the src/components/visualizations directory
-Import it in the Dashboard component
-Add a new view option in the Navbar component
+- Create a new component in the src/components/visualizations directory
+- Import it in the Dashboard component
+- Add a new view option in the Navbar component
 
-Connecting to Additional Data Sources
+### Connecting to Additional Data Sources
 Modify the exoplanetAPI.js file to include additional API endpoints or data sources.
-Technologies Used
 
-React: UI framework
-Vite: Build tool
-Tailwind CSS: Styling
-Recharts: Data visualization
-Axios: API requests
+### Technologies Used
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-Acknowledgments
+- React: UI framework
+- Vite: Build tool
+- Tailwind CSS: Styling
+- Recharts: Data visualization
+- Axios: API requests
 
-Data provided by NASA Exoplanet Archive
-Planet habitability calculations based on current scientific understanding
-Icons from Material Icons
 
-Contributors
+## Acknowledgments
 
-Sri Nithya Anne – M.S. Electrical & Computer Engineering – srinithya@northeastern.edu
-Shayda Moezzi – Ph.D. Electrical & Computer Engineering – shayda@northeastern.edu
-Satya Nandivada – M.S. Electrical & Computer Engineering – satya@northeastern.edu
+- Data provided by NASA Exoplanet Archive
+- Planet habitability calculations based on current scientific understanding
+- Icons from Material Icons
+
+## Contributors
+
+- **Sri Nithya Anne** – M.S. Electrical & Computer Engineering – srinithya@northeastern.edu
+- **Shayda Moezzi** – Ph.D. Electrical & Computer Engineering – shayda@northeastern.edu
+- **Satya Nandivada** – M.S. Electrical & Computer Engineering – satya@northeastern.edu
